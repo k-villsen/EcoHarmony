@@ -1,9 +1,14 @@
 Package: EcoHarmony
-Title: What the Package Does (One Line, Title Case)
+Title: Taxonomic Harmonisation Tools For Ecological Datasets
 Version: 0.0.0.9000
 Authors@R: 
-    person("First", "Last", , "first.last@example.com", role = c("aut", "cre"))
-Description: What the package does (one paragraph).
+    person("Kurt", "Villsen", , "kurt.villsen1@gmail.com", role = c("aut", "cre"))
+Description: This package uses a decision-tree framework that standardises each taxonomic lineage in an ecological dataset to a consensus level using a quantitative measure of ambiguity. 
+The method compares the number of observations assigned to a focal taxon with those assigned to its descendant taxa and calculates a focal–offspring ratio.
+When this ratio exceeds a user-defined threshold, indicating substantial ambiguity, descendant taxa are aggregated to the focal rank.
+When the ratio remains below the threshold, finer-resolution identifications are retained. 
+Parent-level records are then removed whenever descendants are retained so that each lineage is represented only once in the final dataset.
+This framework provides a transparent and reproducible approach for balancing taxonomic resolution against ambiguity. 
 License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
     license
 Encoding: UTF-8
